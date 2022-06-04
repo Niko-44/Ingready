@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ingready.Usuario"
+             Title="Profile"
+             Icon="usuario.png">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Frame BackgroundColor="#A2D9CE" 
+                   VerticalOptions="FillAndExpand" 
+                   Margin="10"
+                   CornerRadius="5">
+                <StackLayout>
+                    <ScrollView>
+                        <Grid RowDefinitions="100, *">
+                            
+                            <!--Fideos-->
+                            <Frame Grid.Row="1" WidthRequest="350"
+                                   Grid.Column="0"
+                                   HorizontalOptions="Center"
+                                   CornerRadius="10"
+                                   Margin="0,-60,0,0"
+                                   BackgroundColor="#D1F2EB"
+                                   >
+                                <StackLayout Margin="0,40,0,450">
+                                    
+                                    <Label Text="Nombre Usuario"
+                                           TextColor="Black"
+                                           FontAttributes="Bold"
+                                           HorizontalOptions="Center"/>
+                                    
+                                    <Label Text="Descripcion sobre el usuario"
+                                           TextColor="Black"/>
+                                    
+                                    <Button Text="Editar" CornerRadius="10"
+                                            HeightRequest="45"
+                                            Background="#17A589"
+                                            VerticalOptions="End"/>
+                                </StackLayout>
+
+                            </Frame>
+                            
+                            <Frame Grid.RowSpan="2"
+                                   Grid.Column="0"
+                                   Padding="0"
+                                   HeightRequest="100"
+                                   VerticalOptions="StartAndExpand"
+                                   HorizontalOptions="Center"
+                                   WidthRequest="100"
+                                   IsClippedToBounds="True"
+                                   CornerRadius="100">
+
+                                <Image Source="https://st.depositphotos.com/1269204/1219/i/950/depositphotos_12196477-stock-photo-smiling-men-isolated-on-the.jpg"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"/>
+                            </Frame>
+
+                        </Grid>
+                    </ScrollView>
+                </StackLayout>
+            </Frame>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
