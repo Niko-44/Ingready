@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Ingready.Vista;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -15,6 +16,7 @@ namespace Ingready
         public Usuario()
         {
             InitializeComponent();
+            BindingContext = new verProductos();
         }
     }
 }
