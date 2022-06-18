@@ -1,17 +1,110 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="Ingready.Usuario"
              Title="Profile"
-             Icon="usuario.png">
-    
-    <ContentPage.Content>
-        <StackLayout>
+             Icon="usuario.png"
+             BackgroundColor="#dafbeb "
+             >
 
-            <CollectionView ItemsSource="{Binding Recetas}">
-                
-            </CollectionView>
-            
+    <ContentPage.Content>
+
+        <StackLayout Margin="10">
+            <StackLayout>
+                <ScrollView>
+                    <Grid RowDefinitions="100, *">
+
+                        <Frame Grid.RowSpan="2"
+                                   Grid.Column="0"
+                                   Padding="0"
+                                   HeightRequest="160"
+                                   VerticalOptions="StartAndExpand"
+                                   HorizontalOptions="Center"
+                                   WidthRequest="160"
+                                   IsClippedToBounds="True"
+                                   CornerRadius="100"
+                                   BackgroundColor="#a7dcb2"
+                                   >
+                        </Frame>
+                        
+                        <Frame Grid.Row="1" WidthRequest="420"
+                                   Grid.Column="0"
+                                   HorizontalOptions="Center"
+                                   CornerRadius="15"
+                                   Margin="0,-20,0,0"
+                                   BackgroundColor="#f6df50"
+                                   >
+                            <!--Gradiente Frame start-->
+                            <Frame.Background>
+                                <LinearGradientBrush EndPoint="0,1">
+                                    <GradientStop Color="#a7dcb2" Offset="0"/>
+                                    <GradientStop Color="#3a7658" Offset="50"/>
+                                </LinearGradientBrush>
+                            </Frame.Background>   
+                            <!--Frame Gradient end-->
+                            
+                            <StackLayout Margin="0,40,0,350">
+                                
+                                <Label Text="----Nombre----"
+                                           TextColor="Black"
+                                            FontSize="20"
+                                           FontAttributes="Bold"
+                                           HorizontalOptions="Center"
+                                       />
+
+                                <Button Text="Crear" CornerRadius="10"
+                                            HeightRequest="45"
+                                            Background="#dafbeb"
+                                            VerticalOptions="End"/>
+
+                                <Button Text="Favoritas" CornerRadius="10"
+                                            HeightRequest="45"
+                                            Background="#dafbeb"
+                                            VerticalOptions="End"/>
+
+                                <Button Text="Tus recetas" CornerRadius="10"
+                                            HeightRequest="45"
+                                            Background="#dafbeb"
+                                            VerticalOptions="End"/>
+
+                                <Button Text="Cerrar sesion" CornerRadius="10"
+                                            HeightRequest="45"
+                                            Background="#dafbeb"
+                                            VerticalOptions="End"/>
+
+                                
+
+                            </StackLayout>
+
+                        </Frame>
+
+
+                        <Frame Grid.RowSpan="2"
+                                   Grid.Column="0"
+                                   Padding="0"
+                                   Margin="13"
+                                   HeightRequest="130"
+                                   VerticalOptions="StartAndExpand"
+                                   HorizontalOptions="Center"
+                                   WidthRequest="130"
+                                   IsClippedToBounds="True"
+                                   CornerRadius="100"
+                                   >
+
+
+                            <Image Source="https://pbs.twimg.com/profile_images/2824225729/1a508cd96c672e497b6295f44085334c_400x400.jpeg"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"/>
+                        </Frame>
+
+                        
+
+
+                    </Grid>
+                </ScrollView>
+            </StackLayout>
         </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>
