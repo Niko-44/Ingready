@@ -62,7 +62,7 @@
                                             Background="#dafbeb"
                                             VerticalOptions="End"
                                         x:Name="btnCrear"
-                                        Clicked="btnCrear_Clicked"/>
+                                        />
 
                                 <Button Text="Favoritas" CornerRadius="10"
                                             HeightRequest="45"

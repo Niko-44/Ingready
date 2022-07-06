@@ -47,7 +47,7 @@ namespace Ingready.Paginas
 
             ///Conectar a la base de datos-----------------------------------
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 10; i++)
             {
                 recetas.Nombre = txtNombre.Text;
                 recetas.Imagen = txtImagen.Text;
