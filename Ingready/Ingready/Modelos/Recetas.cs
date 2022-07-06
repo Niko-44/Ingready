@@ -4,10 +4,14 @@ using System.Text;
 
 namespace Ingready.Modelos
 {
-    public class Recetas
+    public class ClaseRecetas
     {
-        public string Nombre { get; set; }
-        public string Ingredientes { get; set; }
-        public string Imagen { get; set; }
+        private string nombre;
+        private string ingrediente;
+        private string imagen;
+
+        public string Nombre { get{return nombre;} set {nombre = value;} }
+        public string Ingredientes { get { return ingrediente; } set { ingrediente = value; } }
+        public string Imagen { get { return imagen; } set { imagen = value; } }
     }
 }

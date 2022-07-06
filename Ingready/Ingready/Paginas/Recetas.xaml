@@ -4,20 +4,31 @@
              x:Class="Ingready.Paginas.Recetas"
              Title="Search"
              Icon="busqueda.png">
+    <ContentPage.Content>
 
-    <CollectionView ItemsSource="{Binding Recetas}">
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
-                <Frame BackgroundColor="Cyan" CornerRadius="20">
-                    <StackLayout>
-                        <Label Text="{Binding Nombre}"/>
-                        <Label Text="{Binding Ingredientes}"/>
-                    </StackLayout>
-                </Frame>
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
+        <StackLayout>
 
-    
-    
+            <Entry x:Name="txtNombre"/>
+            <Entry x:Name="txtIngrediente"/>
+            <Entry x:Name="txtImagen"/>
+            
+            <Button Text="Cargar datos" x:Name="btnCargar" Clicked="btnCargar_Clicked"/>
+
+            <CollectionView x:Name="cvRecetas">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BackgroundColor="Cyan" CornerRadius="20">
+                            <StackLayout>
+                                <Label Text="{Binding Nombre}"/>
+                                <Label Text="{Binding Ingredientes}"/>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+
 </ContentPage>
