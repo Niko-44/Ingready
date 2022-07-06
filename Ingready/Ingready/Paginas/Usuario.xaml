@@ -72,7 +72,8 @@
                                 <Button Text="Tus recetas" CornerRadius="10"
                                             HeightRequest="45"
                                             Background="#dafbeb"
-                                            VerticalOptions="End"/>
+                                            VerticalOptions="End"
+                                        Clicked="Button_Clicked"/>
 
                                 <Button Text="Cerrar sesion" CornerRadius="10"
                                             HeightRequest="45"

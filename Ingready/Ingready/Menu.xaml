@@ -8,11 +8,13 @@
              SelectedTabColor="#a7dcb2"
              UnselectedTabColor="#a7dcb2"
              BarTextColor="#a7dcb2"
+            NavigationPage.HasNavigationBar="False"
              >
 
     <!--Paginas-->
     <local:MainPage/>
     <local:Filtro/>
     <local:Usuario/>
+    
 
 </TabbedPage>
