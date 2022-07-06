@@ -10,9 +10,9 @@
 
     <ContentPage.Content>
 
-        <StackLayout Margin="0,5,0,0"
-                     VerticalOptions="CenterAndExpand"
-                     HorizontalOptions="CenterAndExpand">
+        <StackLayout Margin="25"
+                     VerticalOptions="FillAndExpand"
+                     HorizontalOptions="FillAndExpand">
             <StackLayout>
                 <ScrollView>
                     <Grid RowDefinitions="100, *">
@@ -35,7 +35,7 @@
                                    HorizontalOptions="Center"
                                    CornerRadius="15"
                                    Margin="0,-20,0,0"
-                                   HeightRequest="627"
+                                   HeightRequest="550"
                                    BackgroundColor="#f6df50"
                                    >
                             
@@ -78,8 +78,6 @@
                                             HeightRequest="45"
                                             Background="#dafbeb"
                                             VerticalOptions="End"/>
-
-                                
 
                             </StackLayout>
 
