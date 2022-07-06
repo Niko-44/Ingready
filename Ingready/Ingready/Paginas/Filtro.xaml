@@ -3,12 +3,83 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ingready.Filtro"
              Title="Filter"
-             Icon="filtro.png">
+             Icon="filtro.png"
+             BackgroundColor="#dafbeb ">
+
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="CenterAndExpand"
+            >
+
             <Label Text="Filtro"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                FontSize="45"
+                   FontFamily="Times New Roman"
+                   Margin="0,0,0,0"
+                HorizontalOptions="CenterAndExpand"
+                   TextColor="Black"/>
+            <Frame
+                VerticalOptions="FillAndExpand"
+                WidthRequest="400"
+                CornerRadius="15"
+                HorizontalOptions="Center"
+                Margin="0,24,0,8"
+             >
+
+                <Frame.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#a7dcb2" Offset="0"/>
+                        <GradientStop Color="#3a7658" Offset="50"/>
+                    </LinearGradientBrush>
+                </Frame.Background>
+                <StackLayout>
+                    <ScrollView>
+                        <StackLayout>
+                            <Button Text="Dulce" CornerRadius="10"
+                                            HeightRequest="40"
+                                            Background="#dafbeb"
+                                            VerticalOptions="End"/>
+                            <Button Text="Salado" CornerRadius="10"
+                                            HeightRequest="40"
+                                            Background="#dafbeb"
+                                            VerticalOptions="End"/>
+                            <Button Text="Agridulce" CornerRadius="10"
+                                            HeightRequest="40"
+                                            Background="#dafbeb"
+                                            VerticalOptions="End"/>
+                            <Button Text="Vegetales" CornerRadius="10"
+                                            HeightRequest="40"
+                                            Background="#dafbeb"
+                                            VerticalOptions="End"/>
+                            <Button Text="Carnes" CornerRadius="10"
+                                            HeightRequest="40"
+                                            Background="#dafbeb"
+                                            VerticalOptions="End"/>
+                            <Button Text="Lacteos" CornerRadius="10"
+                                            HeightRequest="40"
+                                            Background="#dafbeb"
+                                            VerticalOptions="End"/>
+                            <Button Text="Menos de 10 minutos" CornerRadius="10"
+                                            HeightRequest="40"
+                                            Background="#dafbeb"
+                                            VerticalOptions="End"/>
+                            <Button Text="Entre 10 minutos y una hora" CornerRadius="10"
+                                            HeightRequest="40"
+                                            Background="#dafbeb"
+                                            VerticalOptions="End"/>
+                            <Button Text="Mas de una hora" CornerRadius="10"
+                                            HeightRequest="40"
+                                            Background="#dafbeb"
+                                            VerticalOptions="End"/>
+
+                        </StackLayout>
+                    </ScrollView>
+                </StackLayout>
+            </Frame>
+
+
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

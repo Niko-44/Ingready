@@ -10,7 +10,9 @@
 
     <ContentPage.Content>
 
-        <StackLayout Margin="10">
+        <StackLayout Margin="0,5,0,0"
+                     VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="CenterAndExpand">
             <StackLayout>
                 <ScrollView>
                     <Grid RowDefinitions="100, *">
@@ -27,14 +29,16 @@
                                    BackgroundColor="#a7dcb2"
                                    >
                         </Frame>
-                        
-                        <Frame Grid.Row="1" WidthRequest="420"
+
+                        <Frame Grid.Row="1" WidthRequest="400"
                                    Grid.Column="0"
                                    HorizontalOptions="Center"
                                    CornerRadius="15"
                                    Margin="0,-20,0,0"
+                                   HeightRequest="627"
                                    BackgroundColor="#f6df50"
                                    >
+                            
                             <!--Gradiente Frame start-->
                             <Frame.Background>
                                 <LinearGradientBrush EndPoint="0,1">
@@ -45,10 +49,10 @@
                             <!--Frame Gradient end-->
                             
                             <StackLayout Margin="0,40,0,350">
-                                
-                                <Label Text="----Nombre----"
+
+                                <Label Text="Nombre del Usuario"
                                            TextColor="Black"
-                                            FontSize="20"
+                                            FontSize="25"
                                            FontAttributes="Bold"
                                            HorizontalOptions="Center"
                                        />
@@ -56,7 +60,9 @@
                                 <Button Text="Crear" CornerRadius="10"
                                             HeightRequest="45"
                                             Background="#dafbeb"
-                                            VerticalOptions="End"/>
+                                            VerticalOptions="End"
+                                        x:Name="btnCrear"
+                                        Clicked="btnCrear_Clicked"/>
 
                                 <Button Text="Favoritas" CornerRadius="10"
                                             HeightRequest="45"
@@ -93,7 +99,7 @@
                                    >
 
 
-                            <Image Source="https://pbs.twimg.com/profile_images/2824225729/1a508cd96c672e497b6295f44085334c_400x400.jpeg"
+                            <Image Source="http://www.dhanwantaricolleges.com/wp-content/uploads/2020/02/flat-faces-icons-circle-man-9.png"
                                        HorizontalOptions="Center"
                                        VerticalOptions="Center"/>
                         </Frame>

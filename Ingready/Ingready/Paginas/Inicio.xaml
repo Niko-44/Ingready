@@ -4,17 +4,29 @@
              x:Class="Ingready.MainPage"
              Title="Search"
              Icon="busqueda.png"
+             BackgroundColor="#dafbeb"
              >
 
     <ContentPage.Content>
         
-        <StackLayout Background="White">
+        <StackLayout VerticalOptions="FillAndExpand">
+            <Frame CornerRadius="30" Margin="25" VerticalOptions="FillAndExpand" HasShadow="True">
 
-            <ScrollView>
-                <StackLayout>
+                <Frame.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#a7dcb2" Offset="0"/>
+                        <GradientStop Color="#3a7658" Offset="50"/>
+                    </LinearGradientBrush>
+                </Frame.Background>
 
-                </StackLayout>
-            </ScrollView>
+                <Grid>
+                    <ImageButton Grid.Row="1" Margin="0,-130,0,0" WidthRequest="200" CornerRadius="200" Source="food.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label Text="Ingrediente" Grid.Row="1" Margin="0,210,0,0" HorizontalOptions="Center" FontSize="30" TextColor="#D1F2EB" />
+                    <ImageButton Grid.Row="0" Margin="0,0,0,0" WidthRequest="200" CornerRadius="200"  Source="search.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label Text="Recetas" HorizontalOptions="Center" Margin="0,270,0,0" FontSize="30" TextColor="#D1F2EB"/>
+                </Grid>
+
+            </Frame>
 
         </StackLayout>
 
