@@ -7,11 +7,6 @@
     <ContentPage.Content>
 
         <StackLayout>
-
-            <Entry x:Name="txtNombre"/>
-            <Entry x:Name="txtIngrediente"/>
-            <Entry x:Name="txtImagen"/>
-            
             <Button Text="Cargar datos" x:Name="btnCargar" Clicked="btnCargar_Clicked"/>
 
             <CollectionView x:Name="cvRecetas">

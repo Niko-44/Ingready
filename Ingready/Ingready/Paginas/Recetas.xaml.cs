@@ -39,24 +39,22 @@ namespace Ingready.Paginas
             ///Conectar a la base de datos-----------------------------------
             NpgsqlConnection conn = new NpgsqlConnection($"Server={host}; Port={port}; User Id={user};Password = {password}; Database={database};Pooling=true;Use SSL Stream=True;SSL Mode=Require;TrustServerCertificate=True;");
 
-            string tablaReceta = $"Select * from tabla";
+            string tablaReceta = "Select * from recetas";
             NpgsqlCommand command = new NpgsqlCommand(tablaReceta, conn);
-            
-            conn.Close();
             conn.Open();
+            NpgsqlDataReader reader = command.ExecuteReader();
 
-            ///Conectar a la base de datos-----------------------------------
-
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 5; i++)
             {
-                recetas.Nombre = txtNombre.Text;
-                recetas.Imagen = txtImagen.Text;
-                recetas.Ingredientes = txtIngrediente.Text;
+                recetas.Nombre = "G";
+                recetas.Imagen = "H";
+                recetas.Ingredientes = "H";
 
                 listarecetas.Add(recetas);
             }
-
+               
             cvRecetas.ItemsSource = listarecetas;
         }
+
     }
 }
