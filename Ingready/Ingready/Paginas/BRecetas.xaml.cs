@@ -47,7 +47,6 @@ namespace Ingready.Paginas
             while(reader.Read())
             {
                 listarecetas.Add(new ClaseRecetas(reader[0].ToString(), reader[1].ToString(), reader[2].ToString()));
-
             }
                
             cvRecetas.ItemsSource = listarecetas;

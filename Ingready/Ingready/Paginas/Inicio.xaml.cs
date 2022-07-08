@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ingready.Paginas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -15,5 +16,9 @@ namespace Ingready
             InitializeComponent();
         }
 
+        private async void btnRecetas_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Recetas());
+        }
     }
 }

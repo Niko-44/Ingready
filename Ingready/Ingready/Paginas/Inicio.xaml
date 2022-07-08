@@ -22,7 +22,7 @@
                 <Grid>
                     <ImageButton Grid.Row="1" Margin="0,-130,0,0" WidthRequest="200" CornerRadius="200" Source="food.png" HorizontalOptions="Center" VerticalOptions="Center"/>
                     <Label Text="Ingrediente" Grid.Row="1" Margin="0,210,0,0" HorizontalOptions="Center" FontSize="30" TextColor="#D1F2EB" />
-                    <ImageButton Grid.Row="0" Margin="0,0,0,0" WidthRequest="200" CornerRadius="200"  Source="search.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <ImageButton Grid.Row="0" Margin="0,0,0,0" WidthRequest="200" CornerRadius="200"  Source="search.png" HorizontalOptions="Center" VerticalOptions="Center" x:Name="btnRecetas" Clicked="btnRecetas_Clicked"/>
                     <Label Text="Recetas" HorizontalOptions="Center" Margin="0,270,0,0" FontSize="30" TextColor="#D1F2EB"/>
                 </Grid>
 
