@@ -20,8 +20,8 @@
     <Compile Update="Paginas\Inicio.xaml.cs">
       <DependentUpon>Inicio.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Paginas\Buscador.xaml.cs">
-      <DependentUpon>Buscador.xaml</DependentUpon>
+    <Compile Update="Paginas\BRecetas.xaml.cs">
+      <DependentUpon>BRecetas.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -32,7 +32,7 @@
     <EmbeddedResource Update="Menu.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Paginas\Buscador.xaml">
+    <EmbeddedResource Update="Paginas\BRecetas.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Paginas\Usuario.xaml">

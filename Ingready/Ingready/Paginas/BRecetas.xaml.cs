@@ -30,9 +30,10 @@ namespace Ingready.Paginas
         public Recetas()
         {
             InitializeComponent();
+            CargarDatos();
         }
 
-        private void btnCargar_Clicked(object sender, EventArgs e)
+        void CargarDatos()
         {
             ClaseRecetas recetas = new ClaseRecetas();
 
@@ -44,12 +45,13 @@ namespace Ingready.Paginas
             conn.Open();
             NpgsqlDataReader reader = command.ExecuteReader();
 
-            while(reader.Read())
+            while (reader.Read())
             {
                 listarecetas.Add(new ClaseRecetas(reader[0].ToString(), reader[1].ToString(), reader[2].ToString()));
             }
-               
+
             cvRecetas.ItemsSource = listarecetas;
+            conn.Close();
         }
 
     }

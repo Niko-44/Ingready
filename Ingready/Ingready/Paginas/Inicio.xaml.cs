@@ -18,7 +18,9 @@ namespace Ingready
 
         private async void btnRecetas_Clicked(object sender, EventArgs e)
         {
+            btnRecetas.IsEnabled = false;
             await Navigation.PushAsync(new Recetas());
+            btnRecetas.IsEnabled = true;
         }
     }
 }

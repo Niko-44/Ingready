@@ -7,8 +7,7 @@
     <ContentPage.Content>
 
         <StackLayout>
-            <Button Text="Cargar datos" x:Name="btnCargar" Clicked="btnCargar_Clicked"/>
-
+            <Entry/>
             <CollectionView x:Name="cvRecetas">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
