@@ -44,13 +44,10 @@ namespace Ingready.Paginas
             conn.Open();
             NpgsqlDataReader reader = command.ExecuteReader();
 
-            for (int i = 0; i < 5; i++)
+            while(reader.Read())
             {
-                recetas.Nombre = "G";
-                recetas.Imagen = "H";
-                recetas.Ingredientes = "H";
+                listarecetas.Add(new ClaseRecetas(reader[0].ToString(), reader[1].ToString(), reader[2].ToString()));
 
-                listarecetas.Add(recetas);
             }
                
             cvRecetas.ItemsSource = listarecetas;
