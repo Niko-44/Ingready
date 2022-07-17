@@ -17,25 +17,28 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Paginas\Inicio.xaml.cs">
+    <Compile Update="Vistas\Inicio.xaml.cs">
       <DependentUpon>Inicio.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Paginas\BRecetas.xaml.cs">
+    <Compile Update="Vistas\BRecetas.xaml.cs">
       <DependentUpon>BRecetas.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Paginas\Filtro.xaml">
+    <EmbeddedResource Update="Vistas\DetalleReceta.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Vistas\Filtro.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Menu.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Paginas\BRecetas.xaml">
+    <EmbeddedResource Update="Vistas\BRecetas.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Paginas\Usuario.xaml">
+    <EmbeddedResource Update="Vistas\Usuario.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

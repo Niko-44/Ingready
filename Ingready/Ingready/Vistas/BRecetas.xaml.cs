@@ -9,6 +9,8 @@ using Npgsql;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Ingready.Vista_Modelo;
+using Ingready.Vistas;
 
 namespace Ingready.Paginas
 {
@@ -30,6 +32,7 @@ namespace Ingready.Paginas
         public Recetas()
         {
             InitializeComponent();
+            BindingContext = new VMDetallesRecetas(Navigation);
             CargarDatos();
         }
 
@@ -47,12 +50,17 @@ namespace Ingready.Paginas
 
             while (reader.Read())
             {
-                listarecetas.Add(new ClaseRecetas(reader[0].ToString(), reader[1].ToString(), reader[2].ToString()));
+                listarecetas.Add(new ClaseRecetas(reader[1].ToString(), reader[2].ToString(), reader[3].ToString()));
             }
 
             cvRecetas.ItemsSource = listarecetas;
             conn.Close();
+
         }
 
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DetalleReceta());
+        }
     }
 }

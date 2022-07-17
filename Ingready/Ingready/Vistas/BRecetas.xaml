@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ingready.Paginas.Recetas"
+             Title="Search"
+             Icon="busqueda.png">
+    <ContentPage.Content>
+
+        <StackLayout>
+            <Entry/>
+            <CollectionView x:Name="cvRecetas" Margin="0,0,0,0">
+
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" 
+                                     Span="2" 
+                                     HorizontalItemSpacing="3"/>
+                </CollectionView.ItemsLayout>
+                
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid RowDefinitions="100, *" 
+                              Margin="0,0,0,0">
+                            <!--Contenido de las recetas-->
+                            <Frame
+                                Grid.Row="1"
+                                HorizontalOptions="Center"
+                                Margin="0,-100,0,0"
+                                BackgroundColor="#EB984E" CornerRadius="20">
+                                <StackLayout Margin="0,-10,0,0">
+                                    <Image Source="https://t1.rg.ltmcdn.com/es/posts/1/9/3/pizza_casera_31391_600_square.jpg" HeightRequest="180" VerticalOptions="StartAndExpand"/>
+                                    <Label Text="{Binding Nombre}"/>
+                                    <Label Text="{Binding Ingredientes}"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Path=BindingContext.paginaDetalle,Source={x:Reference cvRecetas}}" CommandParameter="{Binding .}"/>
+                            </Grid.GestureRecognizers>
+                            
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+
+</ContentPage>
