@@ -8,7 +8,7 @@
 
         <StackLayout>
             <Entry/>
-            <CollectionView x:Name="cvRecetas" Margin="0,0,0,0">
+            <CollectionView x:Name="cvRecetas" Margin="0,0,0,0" ItemsSource="{Binding listarecetas}">
 
                 <CollectionView.ItemsLayout>
                     <GridItemsLayout Orientation="Vertical" 
@@ -29,7 +29,7 @@
                                 <StackLayout Margin="0,-10,0,0">
                                     <Image Source="https://t1.rg.ltmcdn.com/es/posts/1/9/3/pizza_casera_31391_600_square.jpg" HeightRequest="180" VerticalOptions="StartAndExpand"/>
                                     <Label Text="{Binding Nombre}"/>
-                                    <Label Text="{Binding Ingredientes}"/>
+                                    <Label Text="{Binding Imagen}"/>
                                 </StackLayout>
                             </Frame>
 
