@@ -6,7 +6,7 @@
              Icon="filtro.png"
              BackgroundColor="#dafbeb ">
 
-    <ContentPage.Content>
+    <Grid>
         <StackLayout
             Margin="25"
             VerticalOptions="FillAndExpand"
@@ -21,7 +21,6 @@
                    TextColor="Black"/>
             <Frame
                 VerticalOptions="FillAndExpand"
-                WidthRequest="400"
                 Margin="0,11,0,0"
                 CornerRadius="15"
                 HorizontalOptions="FillAndExpand"
@@ -33,7 +32,7 @@
                         <GradientStop Color="#3a7658" Offset="50"/>
                     </LinearGradientBrush>
                 </Frame.Background>
-                
+
                 <StackLayout>
                     <ScrollView>
                         <StackLayout>
@@ -83,5 +82,5 @@
 
 
         </StackLayout>
-    </ContentPage.Content>
+    </Grid>
 </ContentPage>

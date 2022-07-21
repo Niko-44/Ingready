@@ -7,8 +7,7 @@
              BackgroundColor="#dafbeb"
              >
 
-    <ContentPage.Content>
-        
+     <Grid>
         <StackLayout VerticalOptions="FillAndExpand">
             <Frame CornerRadius="30" Margin="25" VerticalOptions="FillAndExpand" HasShadow="True">
 
@@ -19,17 +18,17 @@
                     </LinearGradientBrush>
                 </Frame.Background>
 
-                <Grid>
-                    <ImageButton Grid.Row="1" Margin="0,-130,0,0" WidthRequest="200" CornerRadius="200" Source="food.png" HorizontalOptions="Center" VerticalOptions="Center"/>
-                    <Label Text="Ingrediente" Grid.Row="1" Margin="0,210,0,0" HorizontalOptions="Center" FontSize="30" TextColor="#D1F2EB" />
-                    <ImageButton Grid.Row="0" Margin="0,0,0,0" WidthRequest="200" CornerRadius="200"  Source="search.png" HorizontalOptions="Center" VerticalOptions="Center" x:Name="btnRecetas" Clicked="btnRecetas_Clicked"/>
-                    <Label Text="Recetas" HorizontalOptions="Center" Margin="0,270,0,0" FontSize="30" TextColor="#D1F2EB"/>
+                <Grid RowDefinitions="*,*">
+                    <ImageButton Grid.Row="0" Grid.Column="0" Margin="0,0,0,0" WidthRequest="200" CornerRadius="200" Source="food.png" HorizontalOptions="Center" VerticalOptions="Center"/>
+                    <Label Text="Recetas" HorizontalOptions="Center" VerticalOptions="EndAndExpand" Grid.Row="0" TextColor="White" FontSize="35" Margin="0,0,0,-10"/>
+                    <ImageButton Grid.Row="1" Grid.Column="0" Margin="0,0,0,0" WidthRequest="200" CornerRadius="200"  Source="search.png" HorizontalOptions="Center" VerticalOptions="Center" x:Name="btnRecetas" Clicked="btnRecetas_Clicked"/>
+                    <Label Text="Ingrediente" HorizontalOptions="Center" VerticalOptions="EndAndExpand" Grid.Row="1" TextColor="White" FontSize="35" Margin="0,0,0,-10"/>
                 </Grid>
 
             </Frame>
             
         </StackLayout>
+     </Grid>
 
-    </ContentPage.Content>
 
 </ContentPage>

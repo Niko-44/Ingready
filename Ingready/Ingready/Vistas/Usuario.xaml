@@ -8,16 +8,16 @@
              BackgroundColor="#dafbeb "
              >
 
-    <ContentPage.Content>
+    <Grid>
 
         <StackLayout Margin="25"
                      VerticalOptions="FillAndExpand"
                      HorizontalOptions="FillAndExpand">
             <StackLayout>
-                <ScrollView>
-                    <Grid RowDefinitions="100, *">
+                <Grid RowDefinitions="100, *">
 
-                        <Frame Grid.RowSpan="2"
+                    <!--Circulo de la foto de perfil-->
+                    <Frame Grid.RowSpan="2"
                                    Grid.Column="0"
                                    Padding="0"
                                    HeightRequest="160"
@@ -28,63 +28,39 @@
                                    CornerRadius="100"
                                    BackgroundColor="#a7dcb2"
                                    >
-                        </Frame>
+                    </Frame>
 
-                        <Frame Grid.Row="1" WidthRequest="400"
+                    <Frame Grid.Row="1" WidthRequest="400"
                                    Grid.Column="0"
-                                   HorizontalOptions="Center"
+                                   HorizontalOptions="FillAndExpand"
+                                   VerticalOptions="FillAndExpand"
                                    CornerRadius="15"
-                                   Margin="0,-20,0,0"
-                                   HeightRequest="550"
+                                   Margin="0,0,0,0"
                                    BackgroundColor="#f6df50"
                                    >
-                            
-                            <!--Gradiente Frame start-->
-                            <Frame.Background>
-                                <LinearGradientBrush EndPoint="0,1">
-                                    <GradientStop Color="#a7dcb2" Offset="0"/>
-                                    <GradientStop Color="#3a7658" Offset="50"/>
-                                </LinearGradientBrush>
-                            </Frame.Background>   
-                            <!--Frame Gradient end-->
-                            
-                            <StackLayout Margin="0,40,0,350">
 
-                                <Label Text="Nombre del Usuario"
-                                           TextColor="Black"
-                                            FontSize="25"
-                                           FontAttributes="Bold"
-                                           HorizontalOptions="Center"
-                                       />
+                        <!--#region Gradient-->
+                        <Frame.Background>
+                            <LinearGradientBrush EndPoint="0,1">
+                                <GradientStop Color="#a7dcb2" Offset="0"/>
+                                <GradientStop Color="#3a7658" Offset="50"/>
+                            </LinearGradientBrush>
+                        </Frame.Background>
+                        <!--#endregion-->
 
-                                <Button Text="Crear" CornerRadius="10"
-                                            HeightRequest="45"
-                                            Background="#dafbeb"
-                                            VerticalOptions="End"
-                                        x:Name="btnCrear"
-                                        />
-
-                                <Button Text="Favoritas" CornerRadius="10"
-                                            HeightRequest="45"
-                                            Background="#dafbeb"
-                                            VerticalOptions="End"/>
-
-                                <Button Text="Tus recetas" CornerRadius="10"
-                                            HeightRequest="45"
-                                            Background="#dafbeb"
-                                            VerticalOptions="End"/>
-
-                                <Button Text="Cerrar sesion" CornerRadius="10"
-                                            HeightRequest="45"
-                                            Background="#dafbeb"
-                                            VerticalOptions="End"/>
-
-                            </StackLayout>
-
-                        </Frame>
+                        <StackLayout Margin="0,30,0,0">
+                            <Label Text="Nombre" TextColor="Black" FontSize="30" HorizontalOptions="CenterAndExpand"/>
+                            <Button Text="Crear" BackgroundColor="White" CornerRadius="10"/>
+                            <Button Text="Crear" BackgroundColor="White" CornerRadius="10"/>
+                            <Button Text="Crear" BackgroundColor="White" CornerRadius="10"/>
+                            <Button Text="Crear" BackgroundColor="White" CornerRadius="10"/>
+                            <Button Text="Crear" BackgroundColor="White" CornerRadius="10"/>
+                            <Button Text="Crear" BackgroundColor="White" CornerRadius="10"/>
+                        </StackLayout>
+                    </Frame>
 
 
-                        <Frame Grid.RowSpan="2"
+                    <Frame Grid.RowSpan="2"
                                    Grid.Column="0"
                                    Padding="0"
                                    Margin="13"
@@ -97,18 +73,15 @@
                                    >
 
 
-                            <Image Source="http://www.dhanwantaricolleges.com/wp-content/uploads/2020/02/flat-faces-icons-circle-man-9.png"
+                        <Image Source="https://cdn-icons.flaticon.com/png/512/2550/premium/2550383.png?token=exp=1658363436~hmac=4170f989b1052736b65767cd0eeba694"
                                        HorizontalOptions="Center"
                                        VerticalOptions="Center"/>
-                        </Frame>
-
-                        
+                    </Frame>
 
 
-                    </Grid>
-                </ScrollView>
+                </Grid>
             </StackLayout>
         </StackLayout>
-        
-    </ContentPage.Content>
+
+    </Grid>
 </ContentPage>
